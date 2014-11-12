@@ -1,0 +1,30 @@
+<div class="container">
+	<h4> <%= link_to "Ver imagen", "http://i.imgur.com/LLprjQ8.jpg"%> </h4>
+	<h5> Todos los campos son obligatorios </h5>
+	<%= form_for @sesion do |f| %>
+	<div class="row">
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :usuario %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :usuario, :size => 50, label: 'Nombre de usuario', required: true, placeholder: 'Ingrese su nombre de usuario' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :contraseña %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :contrasenia, :size => 50, label: 'Contraseña', required: true, placeholder: 'Ingrese su contraseña' %>
+				</div>
+			</div>
+		</div>
+	</div>
+  		<p> </p>
+		<%= f.submit "Iniciar sesión", class: 'btn btn-info btn-sm' %>
+		<%= link_to "Cancelar", root_path, class: 'btn btn-danger btn-sm' %>
+	<% end %>
+</div>

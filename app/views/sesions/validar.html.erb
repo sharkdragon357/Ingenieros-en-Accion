@@ -1,0 +1,12 @@
+<% if @valido == true %> 
+	<h4> <%= image_tag("exito.gif") %> </h4>
+	<h3> "Inicio de sesión exitoso" </h3>
+	<h2> <%= link_to "Ver mi perfil", edit_usuario_path(@usuario) %> </h2>
+	<h2> <%= link_to "Ver lista de subastas disponibles", root_path %> </h2>
+	<h2> <%= link_to "Cerrar sesión", @sesion, method: :delete, data: {confirm: 'Estás seguro?'}, class: 'btn btn-danger btn-sm' %></h2>
+<% else %>
+	<h4> <%= image_tag("oh_no.jpg") %> </h4>
+	<h3> "Error en el inicio de sesión" </h3>
+	<footer> <%= link_to "Volver a intentarlo", new_sesion_path %> </footer>
+	<footer> <%= link_to "Volver a la página principal", root_path %> </footer>
+<% end %>

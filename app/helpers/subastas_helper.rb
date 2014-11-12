@@ -1,0 +1,2 @@
+module SubastasHelper
+end

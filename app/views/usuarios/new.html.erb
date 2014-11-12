@@ -1,0 +1,86 @@
+<div class="container">
+	<h4> <%= link_to "Ver imagen", "http://i.imgur.com/8O5xqzI.png"%> </h4>
+	<h5> Todos los campos son obligatorios </h5>
+	<%= form_for @usuario do |f| %>
+	<div class="row">
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :imagen %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :imagen, :size => 50, label: 'Imagen', required: true, placeholder: 'Ingrese la URL de su imagen de usuario' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :nombre %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :nombre, :size => 50, label: 'Nombre', required: true, placeholder: 'Ingrese su nombre' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :apellido %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :apellido, :size => 50, label: 'Apellido', required: true, placeholder: 'Ingrese su apellido' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :correo %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :correo, :size => 50, label: 'Correo', required: true, placeholder: 'Ingrese su correo' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :edad %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :edad, :size => 50, label: 'Edad', required: true, placeholder: 'Ingrese su edad (en números)' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :tarjeta %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :tarjeta, :size => 50, label: 'Tarjeta', required: true, placeholder: 'Ingrese su tarjeta de crédito' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :usuario %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :usuario, :size => 50, label: 'Nombre de usuario', required: true, placeholder: 'Ingrese su nombre de usuario deseado' %>
+				</div>
+			</div>
+			<p> </p>
+			<div class="row">
+				<div class="col-xs-8 col-sm-6">
+					<%= f.label :contraseña %>
+				</div>
+				<div class="col-xs-4 col-sm-6">
+					<%= f.text_field :contrasenia, :size => 50, label: 'Contraseña', required: true, placeholder: 'Ingrese su contraseña deseada' %>
+				</div>
+			</div>
+		</div>
+	</div>
+  		<p> </p>
+		<h5> Al hacer click en "Registrarse", usted se compromete a cederle a Bestnid el 30% del monto de cada transacción realizada </h5>
+		<p> </p>
+		<%= f.submit "Registrarse", class: 'btn btn-info btn-sm' %>
+		<%= link_to "Cancelar", root_path, class: 'btn btn-danger btn-sm' %>
+	<% end %>
+</div>
